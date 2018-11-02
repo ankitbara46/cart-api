@@ -22,6 +22,24 @@ app.get('/cart.json', (request, response) => {
   
  })
 
+app.use(express.static('public'));
+	
+ app.get('/updatecart', (request, response) => {
+  
+	
+	
+  /*fs.readFile('./../public/cartData.json', function(err, data) {
+    response.setHeader('Access-Control-Allow-Origin', '*');
+    
+  	response.json(JSON.parse(data.toString()));
+	response.end();
+  });
+*/
+
+	response.send('POST request to the homepage')
+  
+ })
+
 
 
 // // Create and Deploy Your First Cloud Functions

@@ -2,13 +2,24 @@
 	"item_count":3,
 	"items":[
 		{
+			"id": "1",
 			"name":"SOLID GREEN COTTTON TSHIRT",
 			"style":"#sgfgdfgd",
 			"color":"Blue",
 			"size":"S",
 			"qty": "2",
-			"price": "240"	
-
+			"price": "$240",
+			"image": "https://cart-8c825.firebaseapp.com/img/item1.jpeg"
+		},
+		{
+			"id": "2",
+			"name":"SOLID GREEN COTTTON TSHIRT",
+			"style":"#sgfgdfgd",
+			"color":"Blue",
+			"size":"M",
+			"qty": "3",
+			"price": "$210",
+			"image": "https://cart-8c825.firebaseapp.com/img/item1.jpeg"
 		}
 
 	]
