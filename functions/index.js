@@ -1,7 +1,6 @@
 const functions = require('firebase-functions');
 const express = require('express');
 const fs = require('fs');
-const { parse } = require('querystring');
 var bodyParser = require('body-parser');
 
 const app = express();
@@ -31,10 +30,7 @@ app.get('/cart.json', (request, response) => {
 
 app.get('/productDetails.json', (request, response) => {
   
-  //console.log();
   fs.readFile('./../public/products.json', function(err, data) {
-    //response.json(JSON.parse(data.toString()));
-	//response.end(request.query.id);
 
 	const product_id = request.query.id;
 
@@ -58,20 +54,6 @@ app.get('/productDetails.json', (request, response) => {
 
  	
  app.post('/updatecart', (request, response) => {
- 	
-	
-	
-  /*fs.readFile('./../public/cartData.json', function(err, data) {
-    response.setHeader('Access-Control-Allow-Origin', '*');
-    
-  	response.json(JSON.parse(data.toString()));
-	response.end();
-  });
-*/
-
-
-	
-
 
 	if (request.method === 'POST') {
 	      
@@ -100,8 +82,6 @@ app.get('/productDetails.json', (request, response) => {
 
 		    jsonData.items = items;
 
-		    //console.log(JSON.stringify(items));
-
 		    fs.writeFile('./../public/cartData.json', JSON.stringify(jsonData), function(err, data) {
 			    if(err) {
 			        response.json({"success": false});
@@ -112,12 +92,8 @@ app.get('/productDetails.json', (request, response) => {
 			});
 
 		  });
-
-	    //response.end(request.body.firstName);
 	}
-	//response.json({"x":20});
-	
-  
+ 
  })
 
 
